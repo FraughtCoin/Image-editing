@@ -7,9 +7,9 @@ function proximalResize(input, p, q, output)
     Tinv = [1 / sx, 0; 0, 1 / sy];
 
     R = zeros(p, q, nrColors);
-    for z = 1: nrColors  
-        for y = 0: p - 1
-            for x = 0: q - 1
+    for z = 1 : nrColors  
+        for y = 0 : p - 1
+            for x = 0 : q - 1
                 rez = Tinv * [x; y];
                 rez = rez + 1;
                 rez = round(rez);
